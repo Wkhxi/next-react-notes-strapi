@@ -1,6 +1,25 @@
 ```
 strapi 用于来快速构建 你的后端，就是一个后端的轮子
 
+COLLECTION TYPES：管理多个条目的内容类型
+SINGLE TYPES：管理一个条目的内容类型
+COMPONENTS：一种可用于 COLLECTION TYPES和 SINGLE TYPES 的可复用的数据结构
+
+
+1. 新建 COLLECTION TYPES： 相当于新建表 并 添加字段
+      1）注意 添加好字段后 publish
+      2）填充数据: Content Manager 中 进行编辑
+2. 生成 token
+      1）Settings -> API Tokens -> Create new API Token
+
+
+3. 接口路径：pluralApiId为建表时生成的id
+      1）GET /api/:pluralApiId
+         POST /api/:pluralApiId
+         举例：http://localhost:1337/api/notes
+
+      2）headers中 携带 token
+          key: Authorization   value: bearer [your_access_token]
 
 ```
 
